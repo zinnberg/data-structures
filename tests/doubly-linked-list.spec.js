@@ -116,6 +116,34 @@ describe('Doubly Linked List', () => {
             expect(linkedList.get(1)).toBe(12);
             expect(linkedList.get(2)).toBe(13);
         });
-        
+    });
+
+    describe('Remove', () => {
+        test(`Given there are 2 or more elements in the list
+                When I remove the first element
+                then that element should no longer be in the list
+                and the second element should now be the first element`,
+        () => {
+            const linkedList = new DoublyLinkedList();
+            linkedList.prepend(13);
+            linkedList.prepend(14);
+            linkedList.remove(14)
+            expect(linkedList.size()).toBe(1);
+            expect(linkedList.head()).toBe(13);
+        });
+
+        test(`Given there are 2 or more elements in the list
+                When I remove an element in the middle of the list
+                Then the element should no longer exist`, 
+        () => {
+            const linkedList = new DoublyLinkedList();
+            linkedList.prepend(13);
+            linkedList.prepend(14);
+            linkedList.prepend(16);
+            linkedList.remove(14)
+            expect(linkedList.size()).toBe(2);
+            expect(linkedList.head()).toBe(16);
+            expect(linkedList.get(1)).toBe(13);
+        });
     });
 });
