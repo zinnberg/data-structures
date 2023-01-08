@@ -32,12 +32,12 @@ class BinarySearchTree {
         if (root.hasLeft()) {
           insertHelper(root.left);
         } else {
-          root.left = insertNode;
+          root.setLeft(insertNode);
         }
       } else if (root.hasRight()) {
         insertHelper(root.right);
       } else {
-        root.right = insertNode;
+        root.setRight(insertNode);
       }
     };
 

@@ -52,6 +52,22 @@ class BSTNode {
   isLeaf() {
     return !this.hasLeft() && !this.hasRight();
   }
+
+  /**
+   * Adds a left Child
+   * @param {BSTNode} node
+   */
+  setLeft(node) {
+    this.left = node;
+  }
+
+  /**
+   * Adds a Right Child
+   * @param {BSTNode} node
+   */
+  setRight(node) {
+    this.right = node;
+  }
 }
 
 module.exports = BSTNode;
