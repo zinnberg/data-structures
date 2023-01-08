@@ -12,6 +12,7 @@ class BSTNode {
     this.left = null;
     this.right = null;
   }
+
   /**
    * Returns The Left Child
    * @returns {BSTNode}
@@ -19,6 +20,7 @@ class BSTNode {
   getLeft() {
     return this.left;
   }
+
   /**
    * Returns The Right Child
    * @returns {BSTNode}
